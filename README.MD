@@ -18,8 +18,8 @@ Incluye operaciones CRUD completas, relaciones entre entidades y una estructura 
 ## 📁 Estructura del proyecto
 
 ```
-config/
-│── config/          # Configuración principal del proyecto
+findit/
+│── findit/          # Configuración principal del proyecto
 │── api/             # App principal
 │   ├── models.py
 │   ├── serializers.py
@@ -36,8 +36,8 @@ config/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd <NOMBRE_DEL_PROYECTO>
+git clone https://github.com/sebas0040/bk_findIt.git
+
 ```
 
 ---
@@ -129,20 +129,10 @@ djangorestframework>=3.14
 
 ## 🧪 Casos de uso (Ejemplos)
 
-### ✅ 1. Crear una categoría
-
-```http
-POST /api/categorias/
-Content-Type: application/json
-
-{
-  "nombre": "Tecnología"
-}
-```
 
 ---
 
-### ✅ 2. Crear un producto
+### ✅ 1. Crear un producto
 
 ```http
 POST /api/productos/
@@ -157,7 +147,7 @@ Content-Type: application/json
 
 ---
 
-### ✅ 3. Listar productos
+### ✅ 2. Listar productos
 
 ```http
 GET /api/productos/
@@ -165,7 +155,7 @@ GET /api/productos/
 
 ---
 
-### ✅ 4. Actualizar precio (PATCH)
+### ✅ 3. Actualizar precio (PATCH)
 
 ```http
 PATCH /api/productos/1/
@@ -178,7 +168,7 @@ Content-Type: application/json
 
 ---
 
-### ✅ 5. Eliminar producto
+### ✅ 4. Eliminar producto
 
 ```http
 DELETE /api/productos/1/
@@ -186,18 +176,13 @@ DELETE /api/productos/1/
 
 ---
 
-## 🔗 Relación de modelos
 
-* Un producto pertenece a una categoría
-* Una categoría puede tener múltiples productos
 
 ---
 
 ## 🔥 Funcionalidades actuales
 
 * CRUD completo de productos
-* CRUD básico de categorías
-* Relaciones con ForeignKey
 * API navegable de Django REST Framework
 
 ---
@@ -215,6 +200,9 @@ DELETE /api/productos/1/
 ## 👨‍💻 Autor
 
 Proyecto desarrollado como práctica de backend con Django REST Framework.
+Deivid Sebastian Armero Gualguan
+Julián Alejandro Flórez Morán
+Marlon Jesus Hernandez Gomez
 
 ---
 
