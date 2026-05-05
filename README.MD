@@ -11,7 +11,7 @@ Incluye operaciones CRUD completas, relaciones entre entidades y una estructura 
 * Python 3.x
 * Django
 * Django REST Framework
-* SQLite (por defecto)
+* PostgreSQL en Docker
 
 ---
 
@@ -72,7 +72,29 @@ pip install -r requirements.txt
 
 ---
 
-### 4. Aplicar migraciones
+### 4. Levantar la base de datos con Docker
+
+```bash
+docker compose up -d db
+```
+
+El contenedor crea automaticamente la base de datos `findit_db`.
+
+Variables usadas por defecto:
+
+```env
+DB_NAME=findit_db
+DB_USER=postgres
+DB_PASSWORD=POSTGRES1
+DB_HOST=localhost
+DB_PORT=5432
+```
+
+Si necesitas cambiarlas, copia `.env.example` como `.env` y ajusta los valores.
+
+---
+
+### 5. Aplicar migraciones
 
 ```bash
 python manage.py makemigrations
@@ -81,7 +103,7 @@ python manage.py migrate
 
 ---
 
-### 5. Ejecutar servidor
+### 6. Ejecutar servidor
 
 ```bash
 python manage.py runserver
